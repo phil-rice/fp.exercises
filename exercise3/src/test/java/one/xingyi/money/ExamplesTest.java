@@ -28,7 +28,7 @@ abstract public class ExamplesTest<T> {
     public void testCanMap() {
         Function<List<T>, List<T>> fn = mapFn(t -> adder.add(t, t(2)));
         assertEquals(List.of(), fn.apply(List.of()));
-        assertEquals(List.of(t(2), t(3), t(4)), fn.apply(List.of(t(1), t(2), t(3))));
+        assertEquals(List.of(t(3), t(4), t(5)), fn.apply(List.of(t(1), t(2), t(3))));
     }
 
     @Test
